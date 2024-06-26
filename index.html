@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Hospital</title>
+</head>
+<body>
+  <h1>Sistema de Hospital</h1>
+
+  <!-- Formulario para agregar pacientes -->
+  <form id="formPaciente">
+    <h2>Agregar Paciente</h2>
+    <label for="nombrePaciente">Nombre:</label>
+    <input type="text" id="nombrePaciente" name="nombrePaciente" required><br>
+    <label for="edadPaciente">Edad:</label>
+    <input type="number" id="edadPaciente" name="edadPaciente" required><br>
+    <label for="direccionPaciente">Dirección:</label>
+    <input type="text" id="direccionPaciente" name="direccionPaciente" required><br>
+    <button type="submit">Agregar Paciente</button>
+  </form>
+
+  <!-- Formulario para agregar doctores -->
+  <form id="formDoctor">
+    <h2>Agregar Doctor</h2>
+    <label for="nombreDoctor">Nombre:</label>
+    <input type="text" id="nombreDoctor" name="nombreDoctor" required><br>
+    <label for="especialidadDoctor">Especialidad:</label>
+    <input type="text" id="especialidadDoctor" name="especialidadDoctor" required><br>
+    <button type="submit">Agregar Doctor</button>
+  </form>
+
+  <!-- Formulario para agregar citas -->
+  <form id="formCita">
+    <h2>Agregar Cita</h2>
+    <label for="pacienteIdCita">ID Paciente:</label>
+    <input type="number" id="pacienteIdCita" name="pacienteIdCita" required><br>
+    <label for="doctorIdCita">ID Doctor:</label>
+    <input type="number" id="doctorIdCita" name="doctorIdCita" required><br>
+    <label for="fechaCita">Fecha de Cita:</label>
+    <input type="datetime-local" id="fechaCita" name="fechaCita" required><br>
+    <label for="motivoCita">Motivo:</label>
+    <textarea id="motivoCita" name="motivoCita" required></textarea><br>
+    <button type="submit">Agregar Cita</button>
+  </form>
+
+  <!-- Sección para mostrar pacientes, doctores y citas -->
+  <div id="pacientes"></div>
+  <div id="doctores"></div>
+  <div id="citas"></div>
+
+  <!-- Script para interactuar con el backend y actualizar la interfaz -->
+  <script src="app.js"></script>
+</body>
+</html>
